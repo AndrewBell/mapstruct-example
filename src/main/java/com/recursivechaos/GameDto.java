@@ -4,13 +4,15 @@ public class GameDto {
 
     private int id;
     private String name;
+    private String typeCode;
 
     public GameDto() {
     }
 
-    public GameDto(int id, String name) {
+    public GameDto(int id, String name, String typeCode) {
         this.id = id;
         this.name = name;
+        this.typeCode = typeCode;
     }
 
     public int getId() {
@@ -27,5 +29,13 @@ public class GameDto {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getTypeCode() {
+        return typeCode;
+    }
+
+    public void setTypeCode(String typeCode) {
+        this.typeCode = typeCode;
     }
 }
