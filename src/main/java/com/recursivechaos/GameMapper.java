@@ -11,7 +11,7 @@ public interface GameMapper {
 
     GameMapper INSTANCE = Mappers.getMapper(GameMapper.class);
 
-    @Mapping(target = "typeCode", ignore = true)
+    @Mapping(target = "typeCode", expression = "java(gameEntity.getType().getShortCode())")
     GameDto entityToDto(GameEntity gameEntity);
 
     @Mapping(target = "type", ignore = true)
